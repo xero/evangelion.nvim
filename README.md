@@ -3,32 +3,18 @@
 a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
 
 supports treesitter, gitsigns, lazy, which-key, telescope, lsp diagnostics, and more.
-```
-                 _            ____
-                : \           |   \    .
-                |  \ .        |    :   |\            /\
-             .  |   :|\__     |    |   | \          /  \
-.            |\ |   |! \ \    |    |   | |\        /   /
-\"-.______   | \:   ||\ \ \   |    |   | | \      /   /
- \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
-   "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
-      \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
-    ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
-  //_________|  /    |/  |/  \__// /     /  /_/ \/
-             | /     |   :      | /     /__/
-             |/                 |/   E V A N G E L I O N
-```
+
 ![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/main/preview.png)
 https://github.com/xero/evangelion.nvim
 
 ## flavors
 
-this theme is available in a classic vim compatible format, optimized lua, and a development lua version. you can install different flavors by using the corresponding branches:
+this theme is available in a classic vim compatible format, optimized lua, and a development lua version.
 
 * [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized versions
 * [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development versions
 
-neovim users should use the `lua` branch
+unless you plan to customize the theme, just use `main`.
 
 ## installation
 
@@ -78,6 +64,21 @@ this theme has been ported to a few different apps, and are included in the `ext
 
 more on the way, and pr's for others are welcomed!
 
+```
+                 _            ____
+                : \           |   \    .
+                |  \ .        |    :   |\            /\
+             .  |   :|\__     |    |   | \          /  \
+.            |\ |   |! \ \    |    |   | |\        /   /
+\"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+ \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+   "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+      \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+    ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+  //_________|  /    |/  |/  \__// /     /  /_/ \/
+             | /     |   :      | /     /__/
+             |/                 |/   E V A N G E L I O N
+```
 # license
 
 ![kopimi logo](https://gist.githubusercontent.com/xero/cbcd5c38b695004c848b73e5c1c0c779/raw/6b32899b0af238b17383d7a878a69a076139e72d/kopimi-sm.png)
