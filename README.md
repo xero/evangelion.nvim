@@ -4,7 +4,7 @@ a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
 
 supports treesitter, gitsigns, lazy, which-key, telescope, lsp diagnostics, and more.
 
-![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/main/preview.png)
+![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
 https://github.com/xero/evangelion.nvim
 
 ## flavors
@@ -64,8 +64,20 @@ this theme has been ported to a few different apps, and are included in the `ext
 
 more on the way, and pr's for others are welcomed!
 
+## previews
+
+![splits](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-splits.png)
+![which-key](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-which-key.png)
+![diff](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-diff.png)
+![completions](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-cmp.png)
+![fzf](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-fzf.png)
+![git](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-git.png)
+![locals](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-locals.png)
+![telescope](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-old-files.png)
+![undo tree](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-undo.png)
+
 ```
-                 _            ____
+ https://x-e.ro  _            ____
                 : \           |   \    .
                 |  \ .        |    :   |\            /\
              .  |   :|\__     |    |   | \          /  \
