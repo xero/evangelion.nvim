@@ -2,7 +2,7 @@
 
 a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
 
-supports treesitter, gitsigns, lazy, which-key, telescope, lsp diagnostics, and more.
+supports treesitter, gitsigns, lazy, which-key, telescope, trouble, lsp diagnostics, & more.
 
 ![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
 https://github.com/xero/evangelion.nvim
@@ -65,6 +65,8 @@ this theme has been ported to a few different apps, and are included in the `ext
 more on the way, and pr's for others are welcomed!
 
 ## previews
+
+screenshots feature other ui styles (e.g. tmux, zsh) from my [dotfiles repo](https://https://git.io/.files)
 
 ![splits](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-splits.png)
 ![which-key](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-which-key.png)
