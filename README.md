@@ -11,30 +11,40 @@ https://github.com/xero/evangelion.nvim
 
 this theme is available in a classic vim compatible format, optimized lua, and a development lua version.
 
-* [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized versions
+* [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized lua version
+* [vim](https://github.com/xero/evangelion.nvim/tree/vim) - classic vim version
 * [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development versions
 
-unless you plan to customize the theme, just use `main`.
+### tldr
+
+for **neovim** use `main` branch
+
+for **vim** use the `vim` branch
 
 ## installation
 
 using `lazy`
 
 ```lua
-{
-  "xero/evangelion.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.cmd("colorscheme evangelion")
-  end,
+
+return {
+	"xero/evangelion.nvim",
+	dev = true,
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require("evangelion").setup({
+			transparent = false,
+		})
+		vim.cmd.colorscheme("evangelion")
+	end,
 }
 ```
 
 using `plug`
 
 ```vim
-Plug 'xero/evangelion.nvim'
+Plug('xero/evangelion.nvim', { branch = 'vim' }')
 colorscheme evangelion
 ```
 
@@ -47,7 +57,8 @@ vim.cmd("colorscheme evangelion")
 
 ## usage
 
-set the color scheme with the builtin command `:colorscheme`
+set the color scheme with the builtin command `:> [!CAUTION]
+> olorscheme`
 
 ## customization
 
