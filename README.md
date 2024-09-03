@@ -1,6 +1,96 @@
-# evangelion.nvim -- "the dev branch"
+# evangelion.nvim
+
+a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
+
+supports treesitter, gitsigns, lazy, which-key, telescope, trouble, lsp diagnostics, & more.
+
+![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
+https://github.com/xero/evangelion.nvim
+
+## flavors
+
+this theme is available in a classic vim compatible format, optimized lua, and a development lua version.
+
+* [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized lua version
+* [vim](https://github.com/xero/evangelion.nvim/tree/vim) - classic vim version
+* [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development versions
+
+### tldr
+
+for **neovim** use `main` branch
+
+for **vim** use the `vim` branch
+
+## installation
+
+using `lazy`
+
+```lua
+
+return {
+	"xero/evangelion.nvim",
+	dev = true,
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require("evangelion").setup({
+			transparent = false,
+		})
+		vim.cmd.colorscheme("evangelion")
+	end,
+}
 ```
-                 _            ____
+
+using `plug`
+
+```vim
+Plug('xero/evangelion.nvim', { branch = 'vim' }')
+colorscheme evangelion
+```
+
+using `packer`
+
+```lua
+use {"xero/evangelion.nvim"}
+vim.cmd("colorscheme evangelion")
+```
+
+## usage
+
+set the color scheme with the builtin command `:> [!CAUTION]
+> olorscheme`
+
+## customization
+
+this theme is built with `lush.nvim`, so customizations are quite easy.
+
+first, checkout the [dev](https://github.com/xero/evangelion.nvim/tree/dev) branch `git fetch origin dev && git checkout dev`, open the lua theme [nvim lua/lush_theme/evangelion.lua](lush_theme/evangelion.lua) and execute `:Lushify`. then adjust colors to suit your taste with real-time feedback. checkout [the dev branch readme](https://github.com/xero/evangelion.nvim/blob/dev/README.md) for details on building the optimized colorscheme. lots more details on using `lush` in [their repo](https://github.com/rktjmp/lush.nvim).
+
+## extras
+
+this theme has been ported to a few different apps, and are included in the `extras` directory:
+
+* `evangelion.Xresources` - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
+* `evangelion.zsh` - colors for [zsh](https://zsh.org)
+
+more on the way, and pr's for others are welcomed!
+
+## previews
+
+screenshots feature other ui styles (e.g. tmux, zsh) from my [dotfiles repo](https://https://git.io/.files)
+
+![splits](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-splits.png)
+![which-key](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-which-key.png)
+![diff](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-diff.png)
+![completions](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-cmp.png)
+![fzf](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-fzf.png)
+![git](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-git.png)
+![locals](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-locals.png)
+![telescope](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-old-files.png)
+![undo tree](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-undo.png)
+
+```
+ https://x-e.ro  _            ____
                 : \           |   \    .
                 |  \ .        |    :   |\            /\
              .  |   :|\__     |    |   | \          /  \
@@ -14,52 +104,9 @@
              | /     |   :      | /     /__/
              |/                 |/   E V A N G E L I O N
 ```
-## dev installation
+# license
 
-to customize and build this theme you will need [lush](https://github.com/rktjmp/lush.nvim) and [shipwright](https://github.com/rktjmp/shipwright.nvim)
+![kopimi logo](https://gist.githubusercontent.com/xero/cbcd5c38b695004c848b73e5c1c0c779/raw/6b32899b0af238b17383d7a878a69a076139e72d/kopimi-sm.png)
 
-using `lazy`
+all files and scripts in this repo are released [CC0](https://creativecommons.org/publicdomain/zero/1.0/) / [kopimi](https://kopimi.com)! in the spirit of _freedom of information_, i encourage you to fork, modify, change, share, or do whatever you like with this project! `^c^v`
 
-```lua
-{
-  "xero/evangelion.nvim",
-  branch = "dev",
-  dependencies = {
-    "rktjmp/lush.nvim",
-    "rktjmp/shipwright.nvim",
-  },
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("evangelion").setup({
-      transparent = false,
-      unit = "01",
-      aggressive_spell = false,
-    })
-    vim.cmd.colorscheme("evangelion")
-  end,
-}
-```
-
-## customization
-
-this theme is built with `lush.nvim`, so customizations are quite easy.
-
-open [lush_theme/evangelion.lua](lush_theme/evangelion.lua) and execute `:Lushify`. then adjust colors in [lua/evangelion/unit01.lua]([lua/evangelion/unit01.lua) to suit your taste with real-time feedback. for the best experience, i suggest disabling LSP and enabeling a colorizer like [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors) or [NvChad-colorizer](https://github.com/NvChad/nvim-colorizer.lua).
-
-lots more details on using `lush` in their repo: [rktjmp/lush.nvim](https://github.com/rktjmp/lush.nvim).
-
-## building
-
-after customizations, use the [build.sh](build.sh) script in the root directory to create release versions of the theme.
-
-* running `./build.sh lua` with generate `lua/evangelion/theme.lua`
-* running `./build.sh vim` with generate `colors/evangelion.vim`
-
-more info in the [lush without lush guide](https://github.com/rktjmp/lush.nvim/blob/main/BUILD.md).
-
-> **_NOTE_** neovim will source `colors/evangelion.vim` if it exists and ignore the lua version. after generating evangelion.vim, switch to the `vim` branch and checkout the newly created file. e.g. `git add colors/evangelion.vim; git commit -m "update"; git checkout vim; git checkout dev colors/evangelion.vim`. the same workflow should apply to the `main` branch using `git checkout dev lua/evangelion/theme.lua`
-
-## contributing
-
-pr's to this repo are welcome. just make sure they target this `dev` branch.
