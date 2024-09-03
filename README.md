@@ -51,6 +51,6 @@ lush is cool and all, but loading the raw lua theme version takes 25+ ms...
 **ermergerd mah startup time!!1!#@~**
 
 so i suggest exporting it as a real vim colorscheme. simply run the
-`build.sh` script in the root directory and `colors/evangelion.vim` and `colors/evangelion.lua` will be
+[build.sh](build.sh) script in the root directory and `colors/evangelion.vim` and `colors/evangelion.lua` will be
 `{cre,upd}ated`. more info in the [lush without lush guide](https://github.com/rktjmp/lush.nvim/blob/main/BUILD.md).
 
