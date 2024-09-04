@@ -23,24 +23,38 @@ for **vim** use the `vim` branch
 
 ## installation
 
-using `lazy`
+using `lazy` _(with all options)_
 
 ```lua
-
-return {
-	"xero/evangelion.nvim",
-	dev = true,
-	lazy = false,
-	priority = 1000,
-	config = function()
-		require("evangelion").setup({
-			transparent = false,
-		})
-		vim.cmd.colorscheme("evangelion")
-	end,
+{
+  "xero/evangelion.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("evangelion").setup{}
+    vim.cmd.colorscheme("evangelion")
+  end,
 }
 ```
 
+using `lazy` _(with all options)_
+
+```lua
+{
+  "xero/evangelion.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("evangelion").setup({
+      transparent = ,
+      overrides = {
+        ["keyword"] = { fg="#ff0000", bg="#cccccc" },
+      },
+    })
+    vim.cmd.colorscheme("evangelion")
+  end,
+}
+```
 using `plug`
 
 ```vim
@@ -55,10 +69,18 @@ use {"xero/evangelion.nvim"}
 vim.cmd("colorscheme evangelion")
 ```
 
+## options
+
+the `setup` function takes a table argument with the following options:
+
+| name | type | default | description |
+| ---- | ---- | ------- | ----------- |
+| `transparent` | **boolean** | __false__ | set's certain background highlights to "none" |
+| `overrides` | **table|boolean** | __false__ | values in this table will override (or append) highlight groups |
+
 ## usage
 
-set the color scheme with the builtin command `:> [!CAUTION]
-> olorscheme`
+set the **evangelion** color scheme with the built-in command `:colorscheme evangelion`
 
 ## customization
 
