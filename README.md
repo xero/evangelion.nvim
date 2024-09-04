@@ -51,7 +51,7 @@ using `lazy` _(with all options)_
       transparent = true,
       overrides = {
         keyword = { fg = "#00ff00", bg = "#222222", undercurl = "true" },
-		["@boolean"] = { link = "Special" },
+        ["@boolean"] = { link = "Special" },
       },
     })
     vim.cmd.colorscheme("evangelion")
