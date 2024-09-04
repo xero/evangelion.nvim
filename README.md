@@ -2,7 +2,7 @@
 
 a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
 
-supports a ton of languages, diagnostics, cmp, fzf, gitsigns, lazy, lsp, lualine, luasnips, mason, nerdtree, telescope, treesitter, trouble, which-key, & more.
+support for tons of languages, diagnostics, cmp, fzf, gitsigns, indents, lazy, lsp, lualine, luasnips, mason, nerdtree, telescope, treesitter, trouble, which-key, & more.
 
 ![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
 
@@ -15,13 +15,13 @@ this theme is available in a classic vim compatible format, optimized lua, and a
 
 * [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized lua version
 * [vim](https://github.com/xero/evangelion.nvim/tree/vim) - classic vim version
-* [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development versions
+* [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development version
 
-### tldr
+#### tl;dr
 
-| neovim | classic vim |
-| ------ | ------ |
-| for <ins>**neovim**</ins> use `main` branch | for <ins>**vim**</ins> use the `vim` branch
+for <ins>**neovim**</ins> use `main` branch
+
+for <ins>**classic vim**</ins> use the `vim` branch
 
 ## installation
 
@@ -50,25 +50,30 @@ using `lazy` _(with all options)_
     require("evangelion").setup({
       transparent = true,
       overrides = {
-        ["keyword"] = { fg="#00ff00", bg="#000000", gui="underline" },
+        keyword = { fg = "#00ff00", bg = "#222222", undercurl = "true" },
+		["@boolean"] = { link = "Special" },
       },
     })
     vim.cmd.colorscheme("evangelion")
   end,
 }
 ```
-using `plug`
-
-```vim
-Plug('xero/evangelion.nvim', { branch = 'vim' }')
-colorscheme evangelion
-```
 
 using `packer`
 
 ```lua
-use {"xero/evangelion.nvim"}
-vim.cmd("colorscheme evangelion")
+use {
+  "xero/evangelion.nvim",
+  config = function() require("evangelion").setup{} end,
+  run = ":colorscheme evangelion"
+}
+```
+
+using `plug`
+
+```vim
+Plug("xero/evangelion.nvim", { branch = "vim" })
+colorscheme evangelion
 ```
 
 ## options
@@ -94,9 +99,9 @@ first, checkout the [dev](https://github.com/xero/evangelion.nvim/tree/dev) bran
 
 this theme has been ported to a few different apps, and are included in the `extras` directory:
 
-* `evangelion.Xresources` - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
-* `evangelion.zsh` - colors for [zsh](https://zsh.org)
-* `evangelion.js` - colors for [blink shell](https://blink.sh)
+* [evangelion.Xresources](extras/evangelion.Xresources) - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
+* [evangelion.zsh](extras/evangelion.zsh) - colors for [zsh](https://zsh.org)
+* [evangelion.js](extras/evangelion.js) - colors for [blink shell](https://blink.sh)
 
 more on the way, and pr's for others are welcomed!
 
