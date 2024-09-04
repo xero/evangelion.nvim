@@ -19,6 +19,7 @@ this theme is available in a classic vim compatible format, optimized lua, and a
 
 ### tldr
 
+| neovim | classic vim |
 | ------ | ------ |
 | for <ins>**neovim**</ins> use `main` branch | for <ins>**vim**</ins> use the `vim` branch
 
@@ -76,7 +77,7 @@ the `setup` function takes a table argument with the following options:
 
 | **name** | **type** | **default** | **description** |
 | ---- | ---- | ------- | ----------- |
-| `transparent` | _boolean_ | _false_ | set's certain background highlights to "none"
+| `transparent` | _boolean_ | _false_ | sets key background highlights to "none", allowing for terminal backgrounds to be visible.
 | `overrides` | _table\|boolean_ | _false_ | values in this table will override (or add new) highlight groups. items that start with an `@` must be wrapped in bracketed quotes (e.g. `["@variable.keyword"]`)
 
 ## usage
