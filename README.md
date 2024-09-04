@@ -33,8 +33,9 @@ using `lazy`
   config = function()
     require("evangelion").setup({
       transparent = false,
-      unit = "01",
-      aggressive_spell = false,
+      overrides = {
+        ["keyword"] = { fg="#ff0000", bg="#cccccc" },
+      },
     })
     vim.cmd.colorscheme("evangelion")
   end,
@@ -45,7 +46,7 @@ using `lazy`
 
 this theme is built with `lush.nvim`, so customizations are quite easy.
 
-open [lush_theme/evangelion.lua](lush_theme/evangelion.lua) and execute `:Lushify`. then adjust colors in [lua/evangelion/unit01.lua]([lua/evangelion/unit01.lua) to suit your taste with real-time feedback. for the best experience, i suggest disabling LSP and enabeling a colorizer like [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors) or [NvChad-colorizer](https://github.com/NvChad/nvim-colorizer.lua).
+open [lush_theme/evangelion.lua](lush_theme/evangelion.lua) and execute `:Lushify`. then adjust the colors to suit your taste with real-time feedback. for the best experience, i suggest enabeling a colorizer like [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors) or [NvChad-colorizer](https://github.com/NvChad/nvim-colorizer.lua).
 
 lots more details on using `lush` in their repo: [rktjmp/lush.nvim](https://github.com/rktjmp/lush.nvim).
 
@@ -58,7 +59,7 @@ after customizations, use the [build.sh](build.sh) script in the root directory 
 
 more info in the [lush without lush guide](https://github.com/rktjmp/lush.nvim/blob/main/BUILD.md).
 
-> **_NOTE_** neovim will source `colors/evangelion.vim` if it exists and ignore the lua version. after generating evangelion.vim, switch to the `vim` branch and checkout the newly created file. e.g. `git add colors/evangelion.vim; git commit -m "update"; git checkout vim; git checkout dev colors/evangelion.vim`. the same workflow should apply to the `main` branch using `git checkout dev lua/evangelion/theme.lua`
+> **_NOTE:_** neovim will first source `colors/evangelion.vim` if it exists then ignore the lua version. so make sure both do not exist in the same working tree. after generating evangelion.vim, switch to the `vim` branch and checkout the newly created file. e.g. `git add colors/evangelion.vim; git commit -m "update"; git checkout vim; git checkout dev colors/evangelion.vim`. the same workflow should apply to the `main` branch using `git checkout dev lua/evangelion/theme.lua`
 
 ## contributing
 

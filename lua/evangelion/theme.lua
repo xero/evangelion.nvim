@@ -517,9 +517,13 @@ X.build = function()
 		TelescopeResultsVariable = { link = "@property" },
 		["@variable.member"] = { fg = "#9F50E1" },
 	}
-	if require("evangelion.config").opts.transparent then
+	local opts = require("evangelion.config").opts
+	if opts.transparent then
 		theme["Normal"].bg = "none"
 		theme["StatusLine"].bg = "none"
+	end
+	if opts.overrides ~= false then
+		theme = vim.tbl_deep_extend("force", theme, opts.overrides)
 	end
 	return theme
 end
