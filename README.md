@@ -2,10 +2,12 @@
 
 a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
 
-supports treesitter, gitsigns, lazy, which-key, telescope, trouble, lsp diagnostics, & more.
+supports a ton of languages, diagnostics, cmp, fzf, gitsigns, lazy, lsp, lualine, luasnips, mason, nerdtree, telescope, treesitter, trouble, which-key, & more.
 
 ![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
-https://github.com/xero/evangelion.nvim
+
+* https://github.com/xero/evangelion.nvim
+* http://s.adland.co
 
 ## flavors
 
@@ -23,7 +25,7 @@ for **vim** use the `vim` branch
 
 ## installation
 
-using `lazy` _(with all options)_
+using `lazy`
 
 ```lua
 {
@@ -46,9 +48,9 @@ using `lazy` _(with all options)_
   priority = 1000,
   config = function()
     require("evangelion").setup({
-      transparent = ,
+      transparent = true,
       overrides = {
-        ["keyword"] = { fg="#ff0000", bg="#cccccc" },
+        ["keyword"] = { fg="#00ff00", bg="#000000", gui="underline" },
       },
     })
     vim.cmd.colorscheme("evangelion")
@@ -73,10 +75,12 @@ vim.cmd("colorscheme evangelion")
 
 the `setup` function takes a table argument with the following options:
 
+| ---- | ---- | ------- | ----------- |
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | `transparent` | **boolean** | __false__ | set's certain background highlights to "none" |
-| `overrides` | **table|boolean** | __false__ | values in this table will override (or append) highlight groups |
+| `overrides` | **table\|boolean** | __false__ | values in this table will override (or append) highlight groups |
+| ---- | ---- | ------- | ----------- |
 
 ## usage
 
@@ -86,7 +90,7 @@ set the **evangelion** color scheme with the built-in command `:colorscheme evan
 
 this theme is built with `lush.nvim`, so customizations are quite easy.
 
-first, checkout the [dev](https://github.com/xero/evangelion.nvim/tree/dev) branch `git fetch origin dev && git checkout dev`, open the lua theme [nvim lua/lush_theme/evangelion.lua](lush_theme/evangelion.lua) and execute `:Lushify`. then adjust colors to suit your taste with real-time feedback. checkout [the dev branch readme](https://github.com/xero/evangelion.nvim/blob/dev/README.md) for details on building the optimized colorscheme. lots more details on using `lush` in [their repo](https://github.com/rktjmp/lush.nvim).
+first, checkout the [dev](https://github.com/xero/evangelion.nvim/tree/dev) branch `git fetch origin dev && git checkout dev`, open the lua theme [nvim lua/lush_theme/evangelion.lua](https://github.com/xero/evangelion.nvim/blob/dev/lush_theme/evangelion.lua) and execute `:Lushify`. then adjust colors to suit your taste with real-time feedback. checkout [the dev branch readme](https://github.com/xero/evangelion.nvim/blob/dev/README.md) for details on building the optimized colorscheme. lots more details on using `lush` in [their repo](https://github.com/rktjmp/lush.nvim).
 
 ## extras
 
@@ -112,19 +116,19 @@ screenshots feature other ui styles (e.g. tmux, zsh) from my [dotfiles repo](htt
 ![undo tree](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-undo.png)
 
 ```
- https://x-e.ro  _            ____
-                : \           |   \    .
-                |  \ .        |    :   |\            /\
-             .  |   :|\__     |    |   | \          /  \
-.            |\ |   |! \ \    |    |   | |\        /   /
-\"-.______   | \:   ||\ \ \   |    |   | | \      /   /
- \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
-   "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
-      \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
-    ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
-  //_________|  /    |/  |/  \__// /     /  /_/ \/
-             | /     |   :      | /     /__/
-             |/                 |/   E V A N G E L I O N
+https://x-e.ro  _            ____
+               : \           |   \    .
+               |  \ .        |    :   |\            /\
+            .  |   :|\__     |    |   | \          /  \
+            |\ |   |! \ \    |    |   | |\        /   /
+"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+\_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+  "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+     \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+    __\_ \__|  |    | __. _/____ / /     /  > // /    \/
+  //________|  /    |/  |/  \__// /     /  /_/ \/
+            | /     |   :      | /     /__/
+            |/                 |/   E V A N G E L I O N
 ```
 # license
 
