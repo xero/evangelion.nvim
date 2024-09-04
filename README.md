@@ -96,6 +96,7 @@ this theme has been ported to a few different apps, and are included in the `ext
 
 * `evangelion.Xresources` - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
 * `evangelion.zsh` - colors for [zsh](https://zsh.org)
+* `evangelion.js` - colors for [blink shell](https://blink.sh)
 
 more on the way, and pr's for others are welcomed!
 
