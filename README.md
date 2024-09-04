@@ -19,9 +19,8 @@ this theme is available in a classic vim compatible format, optimized lua, and a
 
 ### tldr
 
-for **neovim** use `main` branch
-
-for **vim** use the `vim` branch
+| ------ | ------ |
+| for <ins>**neovim**</ins> use `main` branch | for <ins>**vim**</ins> use the `vim` branch
 
 ## installation
 
@@ -75,12 +74,10 @@ vim.cmd("colorscheme evangelion")
 
 the `setup` function takes a table argument with the following options:
 
+| **name** | **type** | **default** | **description** |
 | ---- | ---- | ------- | ----------- |
-| name | type | default | description |
-| ---- | ---- | ------- | ----------- |
-| `transparent` | **boolean** | __false__ | set's certain background highlights to "none" |
-| `overrides` | **table\|boolean** | __false__ | values in this table will override (or append) highlight groups |
-| ---- | ---- | ------- | ----------- |
+| `transparent` | _boolean_ | _false_ | set's certain background highlights to "none"
+| `overrides` | _table\|boolean_ | _false_ | values in this table will override (or add new) highlight groups. items that start with an `@` must be wrapped in bracketed quotes (e.g. `["@variable.keyword"]`)
 
 ## usage
 
@@ -116,19 +113,19 @@ screenshots feature other ui styles (e.g. tmux, zsh) from my [dotfiles repo](htt
 ![undo tree](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-undo.png)
 
 ```
-https://x-e.ro  _            ____
-               : \           |   \    .
-               |  \ .        |    :   |\            /\
-            .  |   :|\__     |    |   | \          /  \
-            |\ |   |! \ \    |    |   | |\        /   /
-"-.______   | \:   ||\ \ \   |    |   | | \      /   /
-\_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
-  "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
-     \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
-    __\_ \__|  |    | __. _/____ / /     /  > // /    \/
-  //________|  /    |/  |/  \__// /     /  /_/ \/
-            | /     |   :      | /     /__/
-            |/                 |/   E V A N G E L I O N
+ https://x-e.ro  _            ____
+                : \           |   \    .
+                |  \ .        |    :   |\            /\
+             .  |   :|\__     |    |   | \          /  \
+             |\ |   |! \ \    |    |   | |\        /   /
+\"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+ \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+   "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+      \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+    ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+  //_________|  /    |/  |/  \__// /     /  /_/ \/
+             | /     |   :      | /     /__/
+             |/                 |/   E V A N G E L I O N
 ```
 # license
 
