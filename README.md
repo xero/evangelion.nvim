@@ -33,9 +33,6 @@ using `lazy`
   config = function()
     require("evangelion").setup({
       transparent = false,
-      overrides = {
-        ["keyword"] = { fg="#ff0000", bg="#cccccc" },
-      },
     })
     vim.cmd.colorscheme("evangelion")
   end,
@@ -59,7 +56,8 @@ after customizations, use the [build.sh](build.sh) script in the root directory 
 
 more info in the [lush without lush guide](https://github.com/rktjmp/lush.nvim/blob/main/BUILD.md).
 
-> **_NOTE:_** neovim will first source `colors/evangelion.vim` if it exists then ignore the lua version. so make sure both do not exist in the same working tree. after generating evangelion.vim, switch to the `vim` branch and checkout the newly created file. e.g. `git add colors/evangelion.vim; git commit -m "update"; git checkout vim; git checkout dev colors/evangelion.vim`. the same workflow should apply to the `main` branch using `git checkout dev lua/evangelion/theme.lua`
+> [!NOTE]
+> neovim will first source `colors/evangelion.vim` if it exists then ignore the lua version. *so make sure both do not exist in the same working tree*. after generating evangelion.vim, switch to the `vim` branch and checkout the newly created file. e.g. `git add colors/evangelion.vim; git commit -m "update"; git checkout vim; git checkout dev colors/evangelion.vim`. the same workflow should apply to the `main` branch using `git checkout dev lua/evangelion/theme.lua`
 
 ## contributing
 
