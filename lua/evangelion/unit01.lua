@@ -7,7 +7,7 @@ function UNIT01.get()
 		["dispair"] = "#101010",
 		["tokyo3"] = "#111111",
 		["fear"] = "#151515",
-		["midnight"] = require("evangelion.config").opts.transparent and "none" or "#201430",
+		["midnight"] = require("evangelion").opts.transparent and "none" or "#201430",
 		["selee"] = "#222222",
 		["casper"] = "#39274C",
 		["balthasar"] = "#39274D",
