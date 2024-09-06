@@ -95,6 +95,39 @@ this theme is built with `lush.nvim`, so customizations are quite easy.
 
 first, checkout the [dev](https://github.com/xero/evangelion.nvim/tree/dev) branch `git fetch origin dev && git checkout dev`, open the lua theme [nvim lua/lush_theme/evangelion.lua](https://github.com/xero/evangelion.nvim/blob/dev/lush_theme/evangelion.lua) and execute `:Lushify`. then adjust colors to suit your taste with real-time feedback. checkout [the dev branch readme](https://github.com/xero/evangelion.nvim/blob/dev/README.md) for details on building the optimized colorscheme. lots more details on using `lush` in [their repo](https://github.com/rktjmp/lush.nvim).
 
+## lualine
+
+this repo comes w/ a [lualine](https://github.com/nvim-lualine/lualine.nvim/) color [theme](lua/lualine/themes/evangelion.lua). but if you wanna make it a bit cooler, here's an example (using lazy):
+
+```lua
+{
+  "nvim-lualine/lualine.nvim",
+  event = "VeryLazy",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  init = function()
+    vim.opt.laststatus = 0 -- disable until lualine loads
+  end,
+  opts = function()
+    return {
+      options = {
+        theme = "evangelion", -- this is all you need
+        component_separators = { left = "░", right = "░" },
+        section_separators = { left = "▓▒░", right = "░▒▓" },
+      },
+      sections = {
+        lualine_x = {
+          { "encoding", padding = { left = 1, right = 1 }, separator = { left = "░▒▓" } },
+          { "fileformat" },
+          { "filetype" },
+        },
+        lualine_y = {'searchcount', 'progress'},
+      },
+    }
+  end,
+}
+```
+or grab the super custom one (used in screenshots) from my [dotfiles](https://github.com/xero/dotfiles/blob/main/neovim/.config/nvim/lua/plugins/lualine.lua)
+
 ## extras
 
 this theme has been ported to a few different apps, and are included in the `extras` directory:
@@ -117,6 +150,7 @@ screenshots feature other ui styles (e.g. tmux, zsh) from my [dotfiles repo](htt
 ![fzf](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-fzf.png)
 ![git](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-git.png)
 ![locals](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-locals.png)
+![theme](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
 ![telescope](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-old-files.png)
 ![undo tree](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-undo.png)
 
