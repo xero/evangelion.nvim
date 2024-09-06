@@ -517,7 +517,7 @@ X.build = function()
 		TelescopeResultsVariable = { link = "@property" },
 		["@variable.member"] = { fg = "#9F50E1" },
 	}
-	local opts = require("evangelion.config").opts
+	local opts = require("evangelion").opts
 	if opts.transparent then
 		theme["Normal"].bg = "none"
 		theme["StatusLine"].bg = "none"
