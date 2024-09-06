@@ -2,6 +2,7 @@ local UNIT01 = {}
 ---@return table
 function UNIT01.get()
 	return {
+		["bg"] = "#201430",
 		["core"] = "#000000",
 		["dispair"] = "#101010",
 		["tokyo3"] = "#111111",
