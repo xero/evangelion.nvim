@@ -23,7 +23,7 @@ local defaults = {
 NGE.opts = defaults
 --- @param opts EvaConfig colorscheme opts
 function NGE.setup(opts)
-  X.opts = vim.tbl_deep_extend("force", {}, X.opts or defaults, opts or {})
+  NGE.opts = vim.tbl_deep_extend("force", {}, NGE.opts or defaults, opts or {})
 end
 --- @param opts EvaConfig colorscheme opts
 function NGE.getintherobotshinji(opts)
