@@ -2,7 +2,7 @@
 
 a colorscheme for `{neo,}vim` inspired by neon genesis evangelion.
 
-support for tons of languages, diagnostics, cmp, fzf, gitsigns, indents, lazy, lsp, lualine, luasnips, mason, nerdtree, telescope, treesitter, trouble, which-key, & more.
+supports tons of languages, diagnostics, cmp, fzf, gitsigns, indents, lazy, lsp, lualine, luasnips, mason, nerdtree, telescope, treesitter, trouble, which-key, & more.
 
 ![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
 
@@ -11,7 +11,7 @@ support for tons of languages, diagnostics, cmp, fzf, gitsigns, indents, lazy, l
 
 ## flavors
 
-this theme is available in a classic vim compatible format, optimized lua, and a development lua version.
+this theme is available in optimized lua, development lua, and classic vim compatible formats based on the branch used.
 
 * [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized lua version
 * [vim](https://github.com/xero/evangelion.nvim/tree/vim) - classic vim version
@@ -32,8 +32,7 @@ using `lazy`
   "xero/evangelion.nvim",
   lazy = false,
   priority = 1000,
-  config = function()
-    require("evangelion").setup{}
+  init = function()
     vim.cmd.colorscheme("evangelion")
   end,
 }
@@ -46,14 +45,13 @@ using `lazy` _(with all options)_
   "xero/evangelion.nvim",
   lazy = false,
   priority = 1000,
-  config = function()
-    require("evangelion").setup({
-      transparent = true,
-      overrides = {
-        keyword = { fg = "#00ff00", bg = "#222222", undercurl = "true" },
-        ["@boolean"] = { link = "Special" },
-      },
-    })
+  opts = {
+    overrides = {
+      keyword = { fg = "#00ff00", bg = "#222222", undercurl = "true" },
+      ["@boolean"] = { link = "Special" },
+    },
+  },
+  init = function()
     vim.cmd.colorscheme("evangelion")
   end,
 }
@@ -97,33 +95,30 @@ first, checkout the [dev](https://github.com/xero/evangelion.nvim/tree/dev) bran
 
 ## lualine
 
-this repo comes w/ a [lualine](https://github.com/nvim-lualine/lualine.nvim/) color [theme](lua/lualine/themes/evangelion.lua). but if you wanna make it a bit cooler, here's an example (using lazy):
+this repo comes w/ a [lualine](https://github.com/nvim-lualine/lualine.nvim/) color [theme](lua/lualine/themes/evangelion.lua). but if you wanna make it a bit cooler, here's an example:
 
 ```lua
 {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  init = function()
-    vim.opt.laststatus = 0 -- disable until lualine loads
-  end,
-  opts = function()
-    return {
-      options = {
-        theme = "evangelion", -- this is all you need
-        component_separators = { left = "░", right = "░" },
-        section_separators = { left = "▓▒░", right = "░▒▓" },
+  opts = {
+    options = {
+      -- this is all you need
+      theme = "evangelion",
+
+      -- below is some extra style
+      component_separators = { left = "░", right = "░" },
+      section_separators = { left = "▓▒░", right = "░▒▓" },
+    },
+    sections = {
+      lualine_x = {
+        { "encoding", padding = { left = 1, right = 1 }, separator = { left = "░▒▓" } },
+        { "fileformat" },
+        { "filetype" },
       },
-      sections = {
-        lualine_x = {
-          { "encoding", padding = { left = 1, right = 1 }, separator = { left = "░▒▓" } },
-          { "fileformat" },
-          { "filetype" },
-        },
-        lualine_y = {'searchcount', 'progress'},
-      },
-    }
-  end,
+      lualine_y = {'searchcount', 'progress'},
+    },
+  },
 }
 ```
 or grab the super custom one (used in screenshots) from my [dotfiles](https://github.com/xero/dotfiles/blob/main/neovim/.config/nvim/lua/plugins/lualine.lua)
