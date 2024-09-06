@@ -1,9 +1,11 @@
 local nge = require("evangelion.unit01").get()
 local evangelion = {}
+
 evangelion.normal = {
 	a = { bg = nge.dummyplug, fg = nge.core },
 	b = { bg = nge.atfield, fg = nge.dispair },
 	c = { bg = nge.midnight, fg = nge.rei },
+	x = { bg = nge.kaji, fg = nge.core },
 }
 evangelion.inactive = {
 	c = { bg = nge.midnight, fg = nge.lost },

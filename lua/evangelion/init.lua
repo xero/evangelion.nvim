@@ -13,9 +13,21 @@
 --             |/                 |/   E V A N G E L I O N
 local NGE = {}
 NGE.name = "evangelion"
+--- @class EvaConfig colorscheme options
+local defaults = {
+  transparent = false, -- set transparent bg hl
+  unit = "01", -- change the theme style
+  aggressive_spell = false, -- display colors for spellcheck
+  overrides = false,
+}
+NGE.opts = defaults
+--- @param opts EvaConfig colorscheme opts
+function NGE.setup(opts)
+  X.opts = vim.tbl_deep_extend("force", {}, X.opts or defaults, opts or {})
+end
 --- @param opts EvaConfig colorscheme opts
 function NGE.getintherobotshinji(opts)
-	if opts then require("evangelion.config").setup(opts) end
+	if opts then NGE.setup(opts) end
 	-- vim.cmd("set t_Co=256")
 	vim.cmd("hi clear")
 	vim.o.termguicolors = true
@@ -28,9 +40,5 @@ function NGE.getintherobotshinji(opts)
 	for group, attrs in pairs(highlights) do
 		vim.api.nvim_set_hl(0, group, attrs)
 	end
-end
---- @param opts EvaConfig colorscheme opts
-function NGE.setup(opts)
-	require("evangelion.config").setup(opts)
 end
 return NGE
