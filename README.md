@@ -6,16 +6,16 @@ supports tons of languages, diagnostics, cmp, fzf, gitsigns, indents, lazy, lsp,
 
 ![theme preview](https://raw.githubusercontent.com/xero/evangelion.nvim/previews/eva-01.png)
 
-* https://github.com/xero/evangelion.nvim
-* http://s.adland.co
+- <https://github.com/xero/evangelion.nvim>
+- <http://s.adland.co>
 
 ## flavors
 
 this theme is available in optimized lua, development lua, and classic vim compatible formats based on the branch used.
 
-* [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized lua version
-* [vim](https://github.com/xero/evangelion.nvim/tree/vim) - classic vim version
-* [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development version
+- [main](https://github.com/xero/evangelion.nvim/tree/main) - optimized lua version
+- [vim](https://github.com/xero/evangelion.nvim/tree/vim) - classic vim version
+- [dev](https://github.com/xero/evangelion.nvim/tree/dev) - development version
 
 #### tl;dr
 
@@ -47,7 +47,7 @@ using `lazy` _(with all options)_
   priority = 1000,
   opts = {
     overrides = {
-      keyword = { fg = "#00ff00", bg = "#222222", undercurl = "true" },
+      keyword = { fg = "#00ff00", bg = "#222222", undercurl = true },
       ["@boolean"] = { link = "Special" },
     },
   },
@@ -78,10 +78,10 @@ colorscheme evangelion
 
 the `setup` function takes a table argument with the following options:
 
-| **name** | **type** | **default** | **description** |
-| ---- | ---- | ------- | ----------- |
-| `transparent` | _boolean_ | _false_ | sets key background highlights to "none", allowing for terminal backgrounds to be visible.
-| `overrides` | _table\|boolean_ | _false_ | values in this table will override (or add new) highlight groups. items that start with an `@` must be wrapped in bracketed quotes (e.g. `["@variable.keyword"]`)
+| **name**      | **type**         | **default** | **description**                                                                                                                                                   |
+| ------------- | ---------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `transparent` | _boolean_        | _false_     | sets key background highlights to "none", allowing for terminal backgrounds to be visible.                                                                        |
+| `overrides`   | _table\|boolean_ | _false_     | values in this table will override (or add new) highlight groups. items that start with an `@` must be wrapped in bracketed quotes (e.g. `["@variable.keyword"]`) |
 
 ## usage
 
@@ -121,16 +121,17 @@ this repo comes w/ a [lualine](https://github.com/nvim-lualine/lualine.nvim/) co
   },
 }
 ```
+
 or grab the super custom one (used in screenshots) from my [dotfiles](https://github.com/xero/dotfiles/blob/main/neovim/.config/nvim/lua/plugins/lualine.lua)
 
 ## extras
 
 this theme has been ported to a few different apps, and are included in the `extras` directory:
 
-* [evangelion.Xresources](extras/evangelion.Xresources) - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
-* [evangelion.zsh](extras/evangelion.zsh) - colors for [zsh](https://zsh.org)
-* [evangelion.js](extras/evangelion.js) - colors for [blink shell](https://blink.sh)
-* [evangelion.el](https://melpa.org/#/evangelion-theme) - theme port for [emacs](https://emacs.sexy)
+- [evangelion.Xresources](extras/evangelion.Xresources) - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
+- [evangelion.zsh](extras/evangelion.zsh) - colors for [zsh](https://zsh.org)
+- [evangelion.js](extras/evangelion.js) - colors for [blink shell](https://blink.sh)
+- [evangelion.el](https://melpa.org/#/evangelion-theme) - theme port for [emacs](https://emacs.sexy)
 
 more on the way, and pr's for others are welcomed!
 
@@ -164,9 +165,9 @@ screenshots feature other ui styles (e.g. tmux, zsh) from my [dotfiles repo](htt
              | /     |   :      | /     /__/
              |/                 |/   E V A N G E L I O N
 ```
+
 # license
 
 ![kopimi logo](https://gist.githubusercontent.com/xero/cbcd5c38b695004c848b73e5c1c0c779/raw/6b32899b0af238b17383d7a878a69a076139e72d/kopimi-sm.png)
 
 all files and scripts in this repo are released [CC0](https://creativecommons.org/publicdomain/zero/1.0/) / [kopimi](https://kopimi.com)! in the spirit of _freedom of information_, i encourage you to fork, modify, change, share, or do whatever you like with this project! `^c^v`
-
