@@ -24,8 +24,10 @@ let g:colors_name="evangelion"
 hi Boolean guifg=#9CDA7C guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi CmpItemAbbrDeprecated guifg=#666666 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi CmpItemAbbrMatch guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi CmpItemKindFunction guifg=#C586C0 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi CmpItemKindKeyword guifg=NONE guibg=#D4D4D4 guisp=NONE blend=NONE gui=NONE
+hi CmpItemKindFunction guifg=#CE67F0 guibg=#452F5C guisp=NONE blend=NONE gui=NONE
+hi CmpItemKindKeyword guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi CmpItemKindText guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
+hi CmpItemKindVariable guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi ColorColumn guifg=NONE guibg=#67478A guisp=NONE blend=NONE gui=NONE
 hi @comment.documentation guifg=#ADA4A0 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Comment guifg=#A1A0AD guibg=#39274D guisp=NONE blend=NONE gui=NONE
@@ -37,7 +39,6 @@ hi CursorLine guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi CursorLineNr guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=bold
 hi Delimiter guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticDeprecated guifg=NONE guibg=NONE guisp=#D99145 blend=NONE gui=strikethrough
-hi DiagnosticError guifg=NONE guibg=#DB6088 guisp=NONE blend=NONE gui=NONE
 hi DiagnosticHintFloating guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticHint guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticInfo guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -63,12 +64,11 @@ hi DiagnosticWarning guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiffAdded guifg=#87FF5F guibg=#000000 guisp=NONE blend=NONE gui=NONE
 hi DiffAdd guifg=#222222 guibg=#87FF5F guisp=NONE blend=NONE gui=NONE
 hi DiffChange guifg=#222222 guibg=#D99145 guisp=NONE blend=NONE gui=NONE
-hi DiffDelete guifg=#000000 guibg=#5B2B41 guisp=NONE blend=NONE gui=bold
+hi DiffDelete guifg=#DB6088 guibg=#5B2B41 guisp=NONE blend=NONE gui=bold
 hi DiffRemoved guifg=#E6BB85 guibg=#000000 guisp=NONE blend=NONE gui=NONE
 hi DiffText guifg=#222222 guibg=#E6BB85 guisp=NONE blend=NONE gui=bold
 hi Directory guifg=#8EDF5F guibg=#000000 guisp=NONE blend=NONE gui=NONE
-hi Error guifg=#E1D6F8 guibg=#5B2B41 guisp=NONE blend=NONE gui=NONE
-hi ErrorMsg guifg=#E1D6F8 guibg=#5B2B41 guisp=NONE blend=NONE gui=NONE
+hi ErrorMsg guifg=#DB6088 guibg=#5B2B41 guisp=NONE blend=NONE gui=NONE
 hi FloatBorder guifg=#B968FC guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi FloatShadow guifg=NONE guibg=#101010 guisp=NONE blend=NONE gui=NONE
 hi FloatShadowThrough guifg=NONE guibg=#151515 guisp=NONE blend=NONE gui=NONE
@@ -123,7 +123,6 @@ hi LazyReasonFt guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi LazyReasonImport guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyReasonKeys guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyReasonPlugin guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi LazyReasonRuntime guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyReasonSource guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyReasonStart guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyTaskOutput guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
@@ -142,9 +141,7 @@ hi! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
 hi! link CmpItemKindInterface CmpItemKindVariable
 hi! link CmpItemKindMethod CmpItemKindFunction
 hi! link CmpItemKindProperty CmpItemKindKeyword
-hi! link CmpItemKindText CmpItemKindVariable
 hi! link CmpItemKindUnit CmpItemKindKeyword
-hi! link CmpItemKindVariable String
 hi! link @comment Comment
 hi! link @comment.error ErrorMsg
 hi! link @comment.todo Todo
@@ -162,8 +159,9 @@ hi! link CursorLineFold FoldColumn
 hi! link CursorLineSign SignColumn
 hi! link Debug Special
 hi! link Define PreProc
-hi! link DiagnosticErrorFloating DiagnosticError
-hi! link DiagnosticFloatingError DiagnosticError
+hi! link DiagnosticError ErrorMsg
+hi! link DiagnosticErrorFloating ErrorMsg
+hi! link DiagnosticFloatingError ErrorMsg
 hi! link DiagnosticFloatingHint DiagnosticHint
 hi! link DiagnosticFloatingInfo DiagnosticInfo
 hi! link DiagnosticFloatingOk DiagnosticOk
@@ -175,6 +173,7 @@ hi! link @diff.delta DiffChange
 hi! link @diff.minus DiffDelete
 hi! link @diff.plus DiffAdd
 hi! link EndOfBuffer NonText
+hi! link Error ErrorMsg
 hi! link Exception Statement
 hi! link @field Identifier
 hi! link Float Number
@@ -227,8 +226,9 @@ hi! link @keyword.type Keyword
 hi! link @keyword.vim Keyword
 hi! link @label Label
 hi! link Label Statement
+hi! link LazyReasonRuntime ErrorMsg
 hi! link LazySpecial Special
-hi! link LazyTaskError NvimInternalError
+hi! link LazyTaskError ErrorMsg
 hi! link lessVariableValue Normal
 hi! link LineNrAbove LineNr
 hi! link LineNrBelow LineNr
@@ -275,23 +275,23 @@ hi! link @module Typedef
 hi! link MsgSeparator StatusLine
 hi! link @namespace Identifier
 hi! link NERDTreeExecFile String
-hi! link NERDTreeHelp Comment
 hi! link NormalFloat Pmenu
 hi! link @number.float Float
 hi! link @number Number
 hi! link NvimArrow Delimiter
 hi! link NvimColon Delimiter
 hi! link NvimComma Delimiter
-hi! link NvimFigureBrace NvimInternalError
+hi! link NvimFigureBrace ErrorMsg
 hi! link NvimIdentifier Identifier
-hi! link NvimInvalid Error
-hi! link NvimInvalidSingleQuotedUnknownEscape NvimInternalError
+hi! link NvimInternalError ErrorMsg
+hi! link NvimInvalid ErrorMsg
+hi! link NvimInvalidSingleQuotedUnknownEscape ErrorMsg
 hi! link NvimInvalidSpacing ErrorMsg
 hi! link NvimNumber Number
 hi! link NvimNumberPrefix Type
 hi! link NvimOptionSigil Type
 hi! link NvimParenthesis Delimiter
-hi! link NvimSingleQuotedUnknownEscape NvimInternalError
+hi! link NvimSingleQuotedUnknownEscape ErrorMsg
 hi! link NvimSpacing Normal
 hi! link NvimString String
 hi! link Operator Delimiter
@@ -356,7 +356,6 @@ hi! link TelescopeResultsOperator Operator
 hi! link TelescopeResultsStruct Constant
 hi! link TelescopeResultsTitle TelescopeTitle
 hi! link TelescopeResultsVariable @property
-hi! link TelescopeSelection Visual
 hi! link @text.diff.add DiffAdd
 hi! link @text.diff.delete DiffDelete
 hi! link @text.literal Comment
@@ -412,12 +411,12 @@ hi mustachePartial guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi mustacheSection guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
 hi mustacheVariable guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi mustacheVariableUnescape guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi NERDTreeHelp guifg=#D99145 guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi netrwClassify guifg=#666666 guibg=NONE guisp=NONE blend=NONE gui=bold
 hi netrwExe guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi NonText guifg=#666666 guibg=none guisp=NONE blend=NONE gui=bold
 hi Normal guifg=#E1D6F8 guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi Number guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi NvimInternalError guifg=#000000 guibg=#5B2B41 guisp=NONE blend=NONE gui=NONE
 hi phpIdentifier guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi phpSpecialFunction guifg=#8BD450 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Pmenu guifg=#B968FC guibg=#483160 guisp=NONE blend=NONE gui=NONE
@@ -435,7 +434,7 @@ hi shDerefSimple guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi SignColumn guifg=#666666 guibg=#483160 guisp=NONE blend=NONE gui=NONE
 hi Special guifg=#8BD450 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi SpecialKey guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi SpellBad guifg=#5B2B41 guibg=#000000 guisp=NONE blend=NONE gui=underline
+hi SpellBad guifg=#5B2B41 guibg=#DB6088 guisp=NONE blend=NONE gui=bold,underline
 hi SpellCap guifg=#87FF5F guibg=#000000 guisp=NONE blend=NONE gui=underline
 hi SpellLocal guifg=#D99145 guibg=#000000 guisp=NONE blend=NONE gui=underline
 hi SpellRare guifg=#E6BB85 guibg=#000000 guisp=NONE blend=NONE gui=underline
@@ -479,7 +478,8 @@ hi TelescopeResultsField guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopeResultsNormal guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi TelescopeResultsNumber guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopeResultsSpecialComment guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi TelescopeSelectionCaret guifg=#000000 guibg=#8EDF5F guisp=NONE blend=NONE gui=bold
+hi TelescopeSelectionCaret guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=bold
+hi TelescopeSelection guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi TelescopeTitle guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi TermCursor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 hi Title guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=bold
