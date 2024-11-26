@@ -66,11 +66,15 @@ X.build = function()
 -- PATCH_OPEN
 -- PATCH_CLOSE
 	}
-	if require("evangelion.config").opts.transparent then
-		theme["Normal"].bg = "none"
-		theme["StatusLine"].bg = "none"
-	end
-	return theme
+  local opts = require("evangelion").opts
+  if opts.transparent then
+    theme["Normal"].bg = "none"
+    theme["StatusLine"].bg = "none"
+  end
+  if opts.overrides ~= false then
+    theme = vim.tbl_deep_extend("force", theme, opts.overrides)
+  end
+  return theme
 end
 return X
 	x0

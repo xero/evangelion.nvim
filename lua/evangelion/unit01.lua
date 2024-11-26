@@ -33,7 +33,7 @@ function UNIT01.get()
 		["asuska"] = "#C586C0",
 		["lilith"] = "#CE67F0",
 		["misato"] = "#DB6088",
-		["angle"] = "#D4D4D4",
+		["angel"] = "#D4D4D4",
 		["lcl"] = "#D99145",
 		["rei"] = "#E1D6F8",
 		["penpen"] = "#E6BB85",
