@@ -21,10 +21,19 @@ endif
 let colors_name="evangelion"
 let g:colors_name="evangelion"
 
+hi BlinkCmpDocBorder guifg=#D99145 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpDoc guifg=#E6BB85 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpDocSeparator guifg=#D99145 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpKind guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpKindText guifg=#AB92FC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpLabel guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpLabelMatch guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpMenu guifg=#8EDF5F guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpSignatureHelp guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Boolean guifg=#9CDA7C guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi CmpItemAbbrDeprecated guifg=#666666 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi CmpItemAbbrMatch guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi CmpItemKindFunction guifg=#CE67F0 guibg=#452F5C guisp=NONE blend=NONE gui=NONE
+hi CmpItemKindFunction guifg=#87FF5F guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi CmpItemKindKeyword guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi CmpItemKindText guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi CmpItemKindVariable guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
@@ -133,6 +142,42 @@ hi lessVariable guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LineNr guifg=#000000 guibg=#67478A guisp=NONE blend=NONE gui=NONE
 hi! link @attribute.builtin Identifier
 hi! link @attribute Constant
+hi! link BlinkCmpDocCursorLine Visual
+hi! link BlinkCmpGhostText NonText
+hi! link BlinkCmpKindClass BlinkCmpKindText
+hi! link BlinkCmpKindColor BlinkCmpKindText
+hi! link BlinkCmpKindConstant BlinkCmpKindText
+hi! link BlinkCmpKindConstructor BlinkCmpKindText
+hi! link BlinkCmpKindEnum BlinkCmpKindText
+hi! link BlinkCmpKindEnumMember BlinkCmpKindText
+hi! link BlinkCmpKindEvent BlinkCmpKindText
+hi! link BlinkCmpKindField BlinkCmpKindText
+hi! link BlinkCmpKindFile BlinkCmpKindText
+hi! link BlinkCmpKindFolder BlinkCmpKindText
+hi! link BlinkCmpKindFunction BlinkCmpKindText
+hi! link BlinkCmpKindInterface BlinkCmpKindText
+hi! link BlinkCmpKindKeyword BlinkCmpKindText
+hi! link BlinkCmpKindMethod BlinkCmpKindText
+hi! link BlinkCmpKindModule BlinkCmpKindText
+hi! link BlinkCmpKindOperator BlinkCmpKindText
+hi! link BlinkCmpKindProperty BlinkCmpKindText
+hi! link BlinkCmpKindReference BlinkCmpKindText
+hi! link BlinkCmpKindSnippet BlinkCmpKindText
+hi! link BlinkCmpKindStruct BlinkCmpKindText
+hi! link BlinkCmpKindTypeParameter BlinkCmpKindText
+hi! link BlinkCmpKindUnit BlinkCmpKindText
+hi! link BlinkCmpKindValue BlinkCmpKindText
+hi! link BlinkCmpKindVariable BlinkCmpKindText
+hi! link BlinkCmpLabelDeprecated NonText
+hi! link BlinkCmpLabelDescription PmenuExtra
+hi! link BlinkCmpLabelDetail PmenuExtra
+hi! link BlinkCmpMenuBorder Pmenu
+hi! link BlinkCmpMenuSelection PmenuSel
+hi! link BlinkCmpScrollBarGutter PmenuSbar
+hi! link BlinkCmpScrollBarThumb PmenuThumb
+hi! link BlinkCmpSignatureHelpActiveParameter LspSignatureActiveParameter
+hi! link BlinkCmpSignatureHelpBorder NormalFloat
+hi! link BlinkCmpSource PmenuExtra
 hi! link @boolean Boolean
 hi! link @character Character
 hi! link Character Constant
@@ -302,7 +347,6 @@ hi! link phpHereDoc String
 hi! link phpVarSelector phpIdentifier
 hi! link PmenuExtra Pmenu
 hi! link PmenuExtraSel PmenuSel
-hi! link PmenuKind Pmenu
 hi! link PmenuKindSel PmenuSel
 hi! link PreCondit PreProc
 hi! link @preproc Keyword
@@ -419,7 +463,8 @@ hi Normal guifg=#E1D6F8 guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi Number guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi phpIdentifier guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi phpSpecialFunction guifg=#8BD450 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi Pmenu guifg=#B968FC guibg=#483160 guisp=NONE blend=NONE gui=NONE
+hi Pmenu guifg=#87FF5F guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi PmenuKind guifg=#67478A guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi PmenuSbar guifg=NONE guibg=#666666 guisp=NONE blend=NONE gui=NONE
 hi PmenuSel guifg=#222222 guibg=#9CDA7C guisp=NONE blend=NONE gui=NONE
 hi PmenuThumb guifg=#B968FC guibg=#B968FC guisp=NONE blend=NONE gui=NONE

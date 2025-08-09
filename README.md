@@ -51,8 +51,8 @@ lots more details on using `lush` in their repo: [rktjmp/lush.nvim](https://gith
 
 after customizations, use the [build.sh](build.sh) script in the root directory to create release versions of the theme.
 
-* running `./build.sh lua` with generate `lua/evangelion/theme.lua`
-* running `./build.sh vim` with generate `colors/evangelion.vim`
+* running `./build.sh lua` will generate `lua/evangelion/theme.lua`
+* running `./build.sh vim` will generate `colors/evangelion.vim`
 
 more info in the [lush without lush guide](https://github.com/rktjmp/lush.nvim/blob/main/BUILD.md).
 
