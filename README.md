@@ -142,9 +142,11 @@ or grab the super custom one (used in screenshots) from my [dotfiles](https://gi
 
 this theme has been ported to a few different apps, and are included in the `extras` directory:
 
+- [evangelion.vim](extras/evangelion.vim) - colors for classic [vim](https://www.vim.org)
 - [evangelion.Xresources](extras/evangelion.Xresources) - colors for [xclients](https://wiki.archlinux.org/title/x_resources) (e.g. unix terminal emulators)
 - [evangelion.zsh](extras/evangelion.zsh) - colors for [zsh](https://zsh.org)
 - [evangelion.js](extras/evangelion.js) - colors for [blink shell](https://blink.sh)
+- [evangelion.ghostty](extras/evangelion.ghostty) - colors for [ghostty](https://ghostty.org/)
 - [evangelion.el](https://melpa.org/#/evangelion-theme) - theme port for [emacs](https://emacs.sexy)
 - [evangelion.obsidian](https://github.com/xero/evangelion.obsidian) - theme for [obsidian](https://obsidian.md)
 
