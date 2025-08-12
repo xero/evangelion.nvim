@@ -21,8 +21,17 @@ endif
 let colors_name="evangelion"
 let g:colors_name="evangelion"
 
-hi BlinkCmpDocBorder guifg=#D99145 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi @comment.documentation guifg=#ADA4A0 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi @comment.note guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=bold
+hi @lsp.type.property guifg=#9F50E1 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi @markup.italic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=italic
+hi @markup.strikethrough guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=strikethrough
+hi @markup.strong guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+hi @markup.underline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+hi @property guifg=#9F50E1 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi @variable.member guifg=#9F50E1 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi BlinkCmpDoc guifg=#E6BB85 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
+hi BlinkCmpDocBorder guifg=#D99145 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
 hi BlinkCmpDocSeparator guifg=#D99145 guibg=#402C56 guisp=NONE blend=NONE gui=NONE
 hi BlinkCmpKind guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi BlinkCmpKindText guifg=#AB92FC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
@@ -38,18 +47,16 @@ hi CmpItemKindKeyword guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi CmpItemKindText guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi CmpItemKindVariable guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi ColorColumn guifg=NONE guibg=#67478A guisp=NONE blend=NONE gui=NONE
-hi @comment.documentation guifg=#ADA4A0 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Comment guifg=#A1A0AD guibg=#39274D guisp=NONE blend=NONE gui=NONE
-hi @comment.note guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=bold
 hi Constant guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi CursorColumn guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi Cursor guifg=#222222 guibg=#D99145 guisp=NONE blend=NONE gui=NONE
+hi CursorColumn guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi CursorLine guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi CursorLineNr guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=bold
 hi Delimiter guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticDeprecated guifg=NONE guibg=NONE guisp=#D99145 blend=NONE gui=strikethrough
-hi DiagnosticHintFloating guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticHint guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi DiagnosticHintFloating guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticInfo guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticOk guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticSignError guifg=#DB6088 guibg=#452F5C guisp=NONE blend=NONE gui=NONE
@@ -68,10 +75,10 @@ hi DiagnosticVirtualTextInfo guifg=#8EDF5F guibg=#452F5C guisp=NONE blend=NONE g
 hi DiagnosticVirtualTextWarn guifg=#D99145 guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi DiagnosticVirtualTextWarning guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticWarn guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi DiagnosticWarningFloating guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiagnosticWarning guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi DiffAdded guifg=#87FF5F guibg=#000000 guisp=NONE blend=NONE gui=NONE
+hi DiagnosticWarningFloating guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi DiffAdd guifg=#222222 guibg=#87FF5F guisp=NONE blend=NONE gui=NONE
+hi DiffAdded guifg=#87FF5F guibg=#000000 guisp=NONE blend=NONE gui=NONE
 hi DiffChange guifg=#222222 guibg=#D99145 guisp=NONE blend=NONE gui=NONE
 hi DiffDelete guifg=#DB6088 guibg=#5B2B41 guisp=NONE blend=NONE gui=bold
 hi DiffRemoved guifg=#E6BB85 guibg=#000000 guisp=NONE blend=NONE gui=NONE
@@ -84,33 +91,17 @@ hi FloatShadowThrough guifg=NONE guibg=#151515 guisp=NONE blend=NONE gui=NONE
 hi FoldColumn guifg=#666666 guibg=#483160 guisp=NONE blend=NONE gui=NONE
 hi Folded guifg=#E6BB85 guibg=#000000 guisp=NONE blend=NONE gui=NONE
 hi Function guifg=#9CDA7C guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi gitCommitBranch guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi gitCommitSelectedFile guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi gitCommitSelectedType guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi gitCommitUnmergedFile guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi gitCommitUnmergedType guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi GitSignsAdd guifg=#87FF5F guibg=#483160 guisp=NONE blend=NONE gui=NONE
 hi GitSignsChange guifg=#9F50E1 guibg=#483160 guisp=NONE blend=NONE gui=NONE
 hi GitSignsDelete guifg=#DB6088 guibg=#483160 guisp=NONE blend=NONE gui=NONE
-hi htmlArg guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi htmlBold guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
-hi htmlBoldItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold,underline
-hi htmlBoldUnderline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold,underline
-hi htmlBoldUnderlineItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold,underline
-hi htmlH1 guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
-hi htmlItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
-hi htmlTag guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi htmlTagName guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi htmlUnderline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
-hi htmlUnderlineItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
 hi IblIndent guifg=#39274C guibg=NONE guisp=NONE blend=NONE gui=nocombine
 hi IblScope guifg=#483160 guibg=NONE guisp=NONE blend=NONE gui=nocombine
 hi IblWhitespace guifg=#402C56 guibg=NONE guisp=NONE blend=NONE gui=nocombine
 hi Identifier guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Ignore guifg=#444444 guibg=NONE guisp=NONE blend=NONE gui=underline
 hi IncSearch guifg=#222222 guibg=#D99145 guisp=NONE blend=NONE gui=NONE
-hi LazyButtonActive guifg=#222222 guibg=#9CDA7C guisp=NONE blend=NONE gui=NONE
 hi LazyButton guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
+hi LazyButtonActive guifg=#222222 guibg=#9CDA7C guisp=NONE blend=NONE gui=NONE
 hi LazyComment guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyCommit guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyCommitIssue guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
@@ -137,345 +128,39 @@ hi LazyReasonStart guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LazyTaskOutput guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi LazyUrl guifg=NONE guibg=#000000 guisp=NONE blend=NONE gui=NONE
 hi LazyValue guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi lCursor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
-hi lessVariable guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi LineNr guifg=#000000 guibg=#67478A guisp=NONE blend=NONE gui=NONE
-hi! link @attribute.builtin Identifier
-hi! link @attribute Constant
-hi! link BlinkCmpDocCursorLine Visual
-hi! link BlinkCmpGhostText NonText
-hi! link BlinkCmpKindClass BlinkCmpKindText
-hi! link BlinkCmpKindColor BlinkCmpKindText
-hi! link BlinkCmpKindConstant BlinkCmpKindText
-hi! link BlinkCmpKindConstructor BlinkCmpKindText
-hi! link BlinkCmpKindEnum BlinkCmpKindText
-hi! link BlinkCmpKindEnumMember BlinkCmpKindText
-hi! link BlinkCmpKindEvent BlinkCmpKindText
-hi! link BlinkCmpKindField BlinkCmpKindText
-hi! link BlinkCmpKindFile BlinkCmpKindText
-hi! link BlinkCmpKindFolder BlinkCmpKindText
-hi! link BlinkCmpKindFunction BlinkCmpKindText
-hi! link BlinkCmpKindInterface BlinkCmpKindText
-hi! link BlinkCmpKindKeyword BlinkCmpKindText
-hi! link BlinkCmpKindMethod BlinkCmpKindText
-hi! link BlinkCmpKindModule BlinkCmpKindText
-hi! link BlinkCmpKindOperator BlinkCmpKindText
-hi! link BlinkCmpKindProperty BlinkCmpKindText
-hi! link BlinkCmpKindReference BlinkCmpKindText
-hi! link BlinkCmpKindSnippet BlinkCmpKindText
-hi! link BlinkCmpKindStruct BlinkCmpKindText
-hi! link BlinkCmpKindTypeParameter BlinkCmpKindText
-hi! link BlinkCmpKindUnit BlinkCmpKindText
-hi! link BlinkCmpKindValue BlinkCmpKindText
-hi! link BlinkCmpKindVariable BlinkCmpKindText
-hi! link BlinkCmpLabelDeprecated NonText
-hi! link BlinkCmpLabelDescription PmenuExtra
-hi! link BlinkCmpLabelDetail PmenuExtra
-hi! link BlinkCmpMenuBorder Pmenu
-hi! link BlinkCmpMenuSelection PmenuSel
-hi! link BlinkCmpScrollBarGutter PmenuSbar
-hi! link BlinkCmpScrollBarThumb PmenuThumb
-hi! link BlinkCmpSignatureHelpActiveParameter LspSignatureActiveParameter
-hi! link BlinkCmpSignatureHelpBorder NormalFloat
-hi! link BlinkCmpSource PmenuExtra
-hi! link @boolean Boolean
-hi! link @character Character
-hi! link Character Constant
-hi! link @character.special SpecialChar
-hi! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
-hi! link CmpItemKindInterface CmpItemKindVariable
-hi! link CmpItemKindMethod CmpItemKindFunction
-hi! link CmpItemKindProperty CmpItemKindKeyword
-hi! link CmpItemKindUnit CmpItemKindKeyword
-hi! link @comment Comment
-hi! link @comment.error ErrorMsg
-hi! link @comment.todo Todo
-hi! link @comment.warning WarningMsg
-hi! link Conceal Ignore
-hi! link Conditional Statement
-hi! link @constant.builtin Special
-hi! link @constant Constant
-hi! link @constant.macro Define
-hi! link @constructor Special
-hi! link CtrlPLinePre Comment
-hi! link CtrlPMatch String
-hi! link CurSearch Search
-hi! link CursorLineFold FoldColumn
-hi! link CursorLineSign SignColumn
-hi! link Debug Special
-hi! link Define PreProc
-hi! link DiagnosticError ErrorMsg
-hi! link DiagnosticErrorFloating ErrorMsg
-hi! link DiagnosticFloatingError ErrorMsg
-hi! link DiagnosticFloatingHint DiagnosticHint
-hi! link DiagnosticFloatingInfo DiagnosticInfo
-hi! link DiagnosticFloatingOk DiagnosticOk
-hi! link DiagnosticFloatingWarn DiagnosticWarn
-hi! link DiagnosticFloatingWarning DiagnosticWarning
-hi! link DiagnosticSignOk DiagnosticOk
-hi! link DiagnosticVirtualTextOk DiagnosticOk
-hi! link @diff.delta DiffChange
-hi! link @diff.minus DiffDelete
-hi! link @diff.plus DiffAdd
-hi! link EndOfBuffer NonText
-hi! link Error ErrorMsg
-hi! link Exception Statement
-hi! link @field Identifier
-hi! link Float Number
-hi! link FloatTitle Title
-hi! link @function.builtin Type
-hi! link @function.call Function
-hi! link @function Function
-hi! link @function.macro Macro
-hi! link @function.method.call Function
-hi! link @function.method Function
-hi! link FzfLuaBorder Normal
-hi! link FzfLuaCursor Cursor
-hi! link FzfLuaCursorLine CursorLine
-hi! link FzfLuaCursorLineNr CursorLineNr
-hi! link FzfLuaNormal Normal
-hi! link FzfLuaScrollFloatEmpty PmenuSbar
-hi! link FzfLuaScrollFloatFull PmenuThumb
-hi! link FzfLuaSearch IncSearch
-hi! link gitCommitDiscardedFile gitCommitUnmergedFile
-hi! link gitCommitDiscardedType gitCommitUnmergedType
-hi! link gitCommitFile Directory
-hi! link gitCommitUntrackedFile gitCommitUnmergedFile
-hi! link helpExample String
-hi! link helpHeadline Title
-hi! link helpHyperTextEntry Statement
-hi! link helpHyperTextJump Underlined
-hi! link helpSectionDelim Comment
-hi! link helpURL Underlined
-hi! link htmlEndTag htmlTag
-hi! link htmlLink Underlined
-hi! link Include PreProc
-hi! link javaScriptBraces Delimiter
-hi! link javaScript Normal
-hi! link @keyword.conditional Conditional
-hi! link @keyword.conditional.ternary Conditional
-hi! link @keyword.coroutine Keyword
-hi! link @keyword.debug Debug
-hi! link @keyword.exception Exception
-hi! link @keyword.function Keyword
-hi! link @keyword.import Keyword
-hi! link @keyword Keyword
-hi! link @keyword.lua Include
-hi! link @keyword.modifier Keyword
-hi! link @keyword.modifier.ruby Keyword
-hi! link @keyword.operator Keyword
-hi! link @keyword.repeat Repeat
-hi! link @keyword.return Keyword
-hi! link Keyword Statement
-hi! link @keyword.type Keyword
-hi! link @keyword.vim Keyword
-hi! link @label Label
-hi! link Label Statement
-hi! link LazyReasonRuntime ErrorMsg
-hi! link LazySpecial Special
-hi! link LazyTaskError ErrorMsg
-hi! link lessVariableValue Normal
-hi! link LineNrAbove LineNr
-hi! link LineNrBelow LineNr
-hi! link LspBorderBG FloatBorder
-hi! link LspCodeLens Comment
-hi! link @lsp.type.comment Comment
-hi! link @lsp.type.decorator Function
-hi! link @lsp.type.enumMember Constant
-hi! link @lsp.type.function Function
-hi! link @lsp.type.method Function
-hi! link @lsp.type.parameter Identifier
-hi! link @lsp.type.type Type
-hi! link @lsp.type.variable Identifier
-hi! link Macro PreProc
-hi! link markdownCodeBlock String
-hi! link markdownCodeDelimiter NonText
-hi! link markdownHeadingRule NonText
-hi! link markdownLinkDelimiter Delimiter
-hi! link markdownURLDelimiter Delimiter
-hi! link @markup.checked Statement
-hi! link @markup.heading.1 Title
-hi! link @markup.heading.2 Title
-hi! link @markup.heading.3 Title
-hi! link @markup.heading.4 Title
-hi! link @markup.heading.5 Title
-hi! link @markup.heading.6 Title
-hi! link @markup.heading Title
-hi! link @markup.link.label Underlined
-hi! link @markup.link Underlined
-hi! link @markup.link.url Underlined
-hi! link @markup.list Statement
-hi! link @markup.math Identifier
-hi! link @markup.quote String
-hi! link @markup.unchecked Statement
-hi! link MasonHeaderSecondary LazyButtonActive
-hi! link MasonHighlightBlockBold LazyH1
-hi! link MasonHighlightBlock LazyH2
-hi! link MasonMutedBlockBold MasonHighlight
-hi! link MasonMutedBlock MasonMuted
-hi! link MasonNormal LazyNormal
-hi! link @method Function
-hi! link @module.builtin Typedef
-hi! link @module Typedef
-hi! link MsgSeparator StatusLine
-hi! link @namespace Identifier
-hi! link NERDTreeExecFile String
-hi! link NormalFloat Pmenu
-hi! link @number.float Float
-hi! link @number Number
-hi! link NvimArrow Delimiter
-hi! link NvimColon Delimiter
-hi! link NvimComma Delimiter
-hi! link NvimFigureBrace ErrorMsg
-hi! link NvimIdentifier Identifier
-hi! link NvimInternalError ErrorMsg
-hi! link NvimInvalid ErrorMsg
-hi! link NvimInvalidSingleQuotedUnknownEscape ErrorMsg
-hi! link NvimInvalidSpacing ErrorMsg
-hi! link NvimNumber Number
-hi! link NvimNumberPrefix Type
-hi! link NvimOptionSigil Type
-hi! link NvimParenthesis Delimiter
-hi! link NvimSingleQuotedUnknownEscape ErrorMsg
-hi! link NvimSpacing Normal
-hi! link NvimString String
-hi! link Operator Delimiter
-hi! link @operator Operator
-hi! link @parameter Identifier
-hi! link phpDefine Statement
-hi! link phpHereDoc String
-hi! link phpVarSelector phpIdentifier
-hi! link PmenuExtra Pmenu
-hi! link PmenuExtraSel PmenuSel
-hi! link PmenuKindSel PmenuSel
-hi! link PreCondit PreProc
-hi! link @preproc Keyword
-hi! link PreProc Keyword
-hi! link @punctuation.bracket Delimiter
-hi! link @punctuation Delimiter
-hi! link @punctuation.special Delimiter
-hi! link QuickFixLine Search
-hi! link Repeat Statement
-hi! link rubyConstant Constant
-hi! link rubyDefine Statement
-hi! link rubyInstanceVariable Number
-hi! link rubyLocalVariableOrMethod Identifier
-hi! link shDerefVar shDerefSimple
-hi! link SpecialChar Special
-hi! link SpecialComment Special
-hi! link StorageClass Type
-hi! link @string.docstrings Comment
-hi! link @string.escape Character
-hi! link @string.regexp Special
-hi! link @string.special.path Character
-hi! link @string.special Special
-hi! link @string.special.symbol Identifier
-hi! link @string.special.url Underlined
-hi! link @string String
-hi! link Structure Type
-hi! link Substitute Search
-hi! link @tag.attribute Identifier
-hi! link @tag.builtin Tag
-hi! link @tag.delimiter Include
-hi! link Tag Special
-hi! link @tag Tag
-hi! link TelescopeMatching Special
-hi! link TelescopePreviewBorder TelescopeBorder
-hi! link TelescopePreviewDirectory String
-hi! link TelescopePreviewLine TelescopeSelection
-hi! link TelescopePreviewMatch Special
-hi! link TelescopePreviewTitle TelescopeTitle
-hi! link TelescopePromptCounter TelescopeBorder
-hi! link TelescopePromptPrefix TelescopeTitle
-hi! link TelescopePromptTitle TelescopeTitle
-hi! link TelescopeResultsBorder TelescopeBorder
-hi! link TelescopeResultsClass Special
-hi! link TelescopeResultsConstant Constant
-hi! link TelescopeResultsFileIcon Special
-hi! link TelescopeResultsFunction Function
-hi! link TelescopeResultsIdentifier Identifier
-hi! link TelescopeResultsLineNr LineNr
-hi! link TelescopeResultsMethod @method
-hi! link TelescopeResultsOperator Operator
-hi! link TelescopeResultsStruct Constant
-hi! link TelescopeResultsTitle TelescopeTitle
-hi! link TelescopeResultsVariable @property
-hi! link @text.diff.add DiffAdd
-hi! link @text.diff.delete DiffDelete
-hi! link @text.literal Comment
-hi! link @text.reference Identifier
-hi! link @text.title Title
-hi! link @text.todo Todo
-hi! link @text.underline Underlined
-hi! link @text.uri Underlined
-hi! link @type.builtin Typedef
-hi! link @type.definition Typedef
-hi! link Typedef Type
-hi! link @type Type
-hi! link @variable.builtin Identifier
-hi! link @variable Identifier
-hi! link @variable.parameter.builtin Identifier
-hi! link @variable.parameter Normal
-hi! link vimContinue Delimiter
-hi! link vimHiAttrib Constant
-hi! link vimSetSep Delimiter
-hi! link Whitespace NonText
-hi! link WinBarNC WinBar
-hi! link WinSeparator VertSplit
-hi! link xmlAttrib xmlTag
-hi! link xmlEndTag xmlTag
-hi! link xmlEqual xmlTag
-hi! link xmlString xmlTagName
 hi LspFloatWinNormal guifg=#B968FC guibg=#43492A guisp=NONE blend=NONE gui=NONE
 hi LspReferenceRead guifg=#87FF5F guibg=NONE guisp=#D99145 blend=NONE gui=bold,undercurl
 hi LspReferenceText guifg=#B968FC guibg=#43492A guisp=#D99145 blend=NONE gui=bold,undercurl
 hi LspReferenceWrite guifg=#87FF5F guibg=NONE guisp=#D99145 blend=NONE gui=bold,undercurl
 hi LspSignatureActiveParameter guifg=NONE guibg=NONE guisp=#D99145 blend=NONE gui=bold,italic,underline
-hi @lsp.type.property guifg=#9F50E1 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi markdownBold guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
-hi markdownItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
-hi @markup.italic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=italic
-hi @markup.strikethrough guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=strikethrough
-hi @markup.strong guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
-hi @markup.underline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
 hi MasonError guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi MasonHeader guifg=#B968FC guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi MasonHeading guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi MasonHighlight guifg=#8EDF5F guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi MasonHighlightBlockBoldSecondary guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi MasonHighlightBlockSecondary guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi MasonHighlight guifg=#8EDF5F guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi MasonHighlightSecondary guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi MasonMuted guifg=#8EDF5F guibg=#000000 guisp=NONE blend=NONE gui=NONE
 hi MasonWarning guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi MatchParen guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=bold,underline
 hi ModeMsg guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
 hi MoreMsg guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=bold
-hi mustacheMarker guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi mustachePartial guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi mustacheSection guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
-hi mustacheVariable guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi mustacheVariableUnescape guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi NERDTreeHelp guifg=#D99145 guibg=#39274D guisp=NONE blend=NONE gui=NONE
-hi netrwClassify guifg=#666666 guibg=NONE guisp=NONE blend=NONE gui=bold
-hi netrwExe guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi NonText guifg=#666666 guibg=none guisp=NONE blend=NONE gui=bold
 hi Normal guifg=#E1D6F8 guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi Number guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi phpIdentifier guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi phpSpecialFunction guifg=#8BD450 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Pmenu guifg=#87FF5F guibg=#402C56 guisp=NONE blend=NONE gui=NONE
 hi PmenuKind guifg=#67478A guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi PmenuSbar guifg=NONE guibg=#666666 guisp=NONE blend=NONE gui=NONE
 hi PmenuSel guifg=#222222 guibg=#9CDA7C guisp=NONE blend=NONE gui=NONE
 hi PmenuThumb guifg=#B968FC guibg=#B968FC guisp=NONE blend=NONE gui=NONE
-hi @property guifg=#9F50E1 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi Question guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=bold
 hi RedrawDebugClear guifg=#222222 guibg=#E6BB85 guisp=NONE blend=NONE gui=NONE
 hi RedrawDebugComposed guifg=#222222 guibg=#9CDA7C guisp=NONE blend=NONE gui=NONE
 hi RedrawDebugNormal guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 hi RedrawDebugRecompose guifg=#222222 guibg=#D99145 guisp=NONE blend=NONE gui=NONE
 hi Search guifg=#222222 guibg=#87FF5F guisp=NONE blend=NONE gui=NONE
-hi shDerefSimple guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi SignColumn guifg=#666666 guibg=#483160 guisp=NONE blend=NONE gui=NONE
 hi Special guifg=#8BD450 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi SpecialKey guifg=#B968FC guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -489,8 +174,8 @@ hi StatusLineNC guifg=#666666 guibg=#222222 guisp=NONE blend=NONE gui=bold
 hi String guifg=#AB92FC guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi SyntasticErrorSign guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi SyntasticWarningSign guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi TabLineFill guifg=#87FF5F guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi TabLine guifg=#666666 guibg=#111111 guisp=NONE blend=NONE gui=NONE
+hi TabLineFill guifg=#87FF5F guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi TabLineSel guifg=#201430 guibg=#9CDA7C guisp=NONE blend=NONE gui=bold
 hi TabLineSelSep guifg=#9CDA7C guibg=#201430 guisp=NONE blend=NONE gui=bold
 hi TabLineSep guifg=#000000 guibg=#201430 guisp=NONE blend=NONE gui=NONE
@@ -505,8 +190,8 @@ hi TelescopePreviewExecute guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewGroup guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewHyphen guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewLink guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi TelescopePreviewMessageFillchar guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewMessage guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=bold
+hi TelescopePreviewMessageFillchar guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewNormal guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewPipe guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopePreviewRead guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -523,8 +208,8 @@ hi TelescopeResultsField guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopeResultsNormal guifg=NONE guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi TelescopeResultsNumber guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi TelescopeResultsSpecialComment guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-hi TelescopeSelectionCaret guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=bold
 hi TelescopeSelection guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
+hi TelescopeSelectionCaret guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=bold
 hi TelescopeTitle guifg=#87FF5F guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi TermCursor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 hi Title guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=bold
@@ -565,18 +250,333 @@ hi User6 guifg=#9CDA7C guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi User7 guifg=#A4D2EC guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi User8 guifg=#CE67F0 guibg=#452F5C guisp=NONE blend=NONE gui=NONE
 hi User9 guifg=#875FAF guibg=#452F5C guisp=NONE blend=NONE gui=NONE
-hi @variable.member guifg=#9F50E1 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi VertSplit guifg=#875FAF guibg=#201430 guisp=NONE blend=NONE gui=NONE
 hi Visual guifg=#222222 guibg=#8EDF5F guisp=NONE blend=NONE gui=NONE
 hi WarningMsg guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi WhichKey guifg=#87FF5F guibg=none guisp=NONE blend=NONE gui=NONE
 hi WhichKeyBorder guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi WhichKeyDesc guifg=#E1D6F8 guibg=none guisp=NONE blend=NONE gui=NONE
 hi WhichKeyFloat guifg=NONE guibg=#39274D guisp=NONE blend=NONE gui=NONE
 hi WhichKeyGroup guifg=#E1D6F8 guibg=#39274D guisp=NONE blend=NONE gui=NONE
-hi WhichKey guifg=#87FF5F guibg=none guisp=NONE blend=NONE gui=NONE
 hi WhichKeySeparator guifg=#875FAF guibg=none guisp=NONE blend=NONE gui=NONE
 hi WhichKeyValue guifg=#E6BB85 guibg=none guisp=NONE blend=NONE gui=NONE
 hi WildMenu guifg=#000000 guibg=#875FAF guisp=NONE blend=NONE gui=NONE
 hi WinBar guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+hi gitCommitBranch guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi gitCommitSelectedFile guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi gitCommitSelectedType guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi gitCommitUnmergedFile guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi gitCommitUnmergedType guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi htmlArg guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi htmlBold guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+hi htmlBoldItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+hi htmlBoldUnderline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+hi htmlBoldUnderlineItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold,underline
+hi htmlH1 guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+hi htmlItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+hi htmlTag guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi htmlTagName guifg=#87FF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi htmlUnderline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+hi htmlUnderlineItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+hi lCursor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
+hi lessVariable guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi markdownBold guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+hi markdownItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=underline
+hi mustacheMarker guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi mustachePartial guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi mustacheSection guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
+hi mustacheVariable guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi mustacheVariableUnescape guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi netrwClassify guifg=#666666 guibg=NONE guisp=NONE blend=NONE gui=bold
+hi netrwExe guifg=#D99145 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi phpIdentifier guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi phpSpecialFunction guifg=#8BD450 guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi shDerefSimple guifg=#E6BB85 guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi xmlTag guifg=#8EDF5F guibg=NONE guisp=NONE blend=NONE gui=NONE
 hi xmlTagName guifg=#9CDA7C guibg=NONE guisp=NONE blend=NONE gui=NONE
+hi! link @attribute Constant
+hi! link @attribute.builtin Identifier
+hi! link @boolean Boolean
+hi! link @character Character
+hi! link @character.special SpecialChar
+hi! link @comment Comment
+hi! link @comment.error ErrorMsg
+hi! link @comment.todo Todo
+hi! link @comment.warning WarningMsg
+hi! link @constant Constant
+hi! link @constant.builtin Special
+hi! link @constant.macro Define
+hi! link @constructor Special
+hi! link @diff.delta DiffChange
+hi! link @diff.minus DiffDelete
+hi! link @diff.plus DiffAdd
+hi! link @field Identifier
+hi! link @function Function
+hi! link @function.builtin Type
+hi! link @function.call Function
+hi! link @function.macro Macro
+hi! link @function.method Function
+hi! link @function.method.call Function
+hi! link @keyword Keyword
+hi! link @keyword.conditional Conditional
+hi! link @keyword.conditional.ternary Conditional
+hi! link @keyword.coroutine Keyword
+hi! link @keyword.debug Debug
+hi! link @keyword.exception Exception
+hi! link @keyword.function Keyword
+hi! link @keyword.import Keyword
+hi! link @keyword.lua Include
+hi! link @keyword.modifier Keyword
+hi! link @keyword.modifier.ruby Keyword
+hi! link @keyword.operator Keyword
+hi! link @keyword.repeat Repeat
+hi! link @keyword.return Keyword
+hi! link @keyword.type Keyword
+hi! link @keyword.vim Keyword
+hi! link @label Label
+hi! link @lsp.type.comment Comment
+hi! link @lsp.type.decorator Function
+hi! link @lsp.type.enumMember Constant
+hi! link @lsp.type.function Function
+hi! link @lsp.type.method Function
+hi! link @lsp.type.parameter Identifier
+hi! link @lsp.type.type Type
+hi! link @lsp.type.variable Identifier
+hi! link @markup.checked Statement
+hi! link @markup.heading Title
+hi! link @markup.heading.1 Title
+hi! link @markup.heading.2 Title
+hi! link @markup.heading.3 Title
+hi! link @markup.heading.4 Title
+hi! link @markup.heading.5 Title
+hi! link @markup.heading.6 Title
+hi! link @markup.link Underlined
+hi! link @markup.link.label Underlined
+hi! link @markup.link.url Underlined
+hi! link @markup.list Statement
+hi! link @markup.math Identifier
+hi! link @markup.quote String
+hi! link @markup.unchecked Statement
+hi! link @method Function
+hi! link @module Typedef
+hi! link @module.builtin Typedef
+hi! link @namespace Identifier
+hi! link @number Number
+hi! link @number.float Float
+hi! link @operator Operator
+hi! link @parameter Identifier
+hi! link @preproc Keyword
+hi! link @punctuation Delimiter
+hi! link @punctuation.bracket Delimiter
+hi! link @punctuation.special Delimiter
+hi! link @string String
+hi! link @string.docstrings Comment
+hi! link @string.escape Character
+hi! link @string.regexp Special
+hi! link @string.special Special
+hi! link @string.special.path Character
+hi! link @string.special.symbol Identifier
+hi! link @string.special.url Underlined
+hi! link @tag Tag
+hi! link @tag.attribute Identifier
+hi! link @tag.builtin Tag
+hi! link @tag.delimiter Include
+hi! link @text.diff.add DiffAdd
+hi! link @text.diff.delete DiffDelete
+hi! link @text.literal Comment
+hi! link @text.reference Identifier
+hi! link @text.title Title
+hi! link @text.todo Todo
+hi! link @text.underline Underlined
+hi! link @text.uri Underlined
+hi! link @type Type
+hi! link @type.builtin Typedef
+hi! link @type.definition Typedef
+hi! link @variable Identifier
+hi! link @variable.builtin Identifier
+hi! link @variable.parameter Normal
+hi! link @variable.parameter.builtin Identifier
+hi! link BlinkCmpDocCursorLine Visual
+hi! link BlinkCmpGhostText NonText
+hi! link BlinkCmpKindClass BlinkCmpKindText
+hi! link BlinkCmpKindColor BlinkCmpKindText
+hi! link BlinkCmpKindConstant BlinkCmpKindText
+hi! link BlinkCmpKindConstructor BlinkCmpKindText
+hi! link BlinkCmpKindEnum BlinkCmpKindText
+hi! link BlinkCmpKindEnumMember BlinkCmpKindText
+hi! link BlinkCmpKindEvent BlinkCmpKindText
+hi! link BlinkCmpKindField BlinkCmpKindText
+hi! link BlinkCmpKindFile BlinkCmpKindText
+hi! link BlinkCmpKindFolder BlinkCmpKindText
+hi! link BlinkCmpKindFunction BlinkCmpKindText
+hi! link BlinkCmpKindInterface BlinkCmpKindText
+hi! link BlinkCmpKindKeyword BlinkCmpKindText
+hi! link BlinkCmpKindMethod BlinkCmpKindText
+hi! link BlinkCmpKindModule BlinkCmpKindText
+hi! link BlinkCmpKindOperator BlinkCmpKindText
+hi! link BlinkCmpKindProperty BlinkCmpKindText
+hi! link BlinkCmpKindReference BlinkCmpKindText
+hi! link BlinkCmpKindSnippet BlinkCmpKindText
+hi! link BlinkCmpKindStruct BlinkCmpKindText
+hi! link BlinkCmpKindTypeParameter BlinkCmpKindText
+hi! link BlinkCmpKindUnit BlinkCmpKindText
+hi! link BlinkCmpKindValue BlinkCmpKindText
+hi! link BlinkCmpKindVariable BlinkCmpKindText
+hi! link BlinkCmpLabelDeprecated NonText
+hi! link BlinkCmpLabelDescription PmenuExtra
+hi! link BlinkCmpLabelDetail PmenuExtra
+hi! link BlinkCmpMenuBorder Pmenu
+hi! link BlinkCmpMenuSelection PmenuSel
+hi! link BlinkCmpScrollBarGutter PmenuSbar
+hi! link BlinkCmpScrollBarThumb PmenuThumb
+hi! link BlinkCmpSignatureHelpActiveParameter LspSignatureActiveParameter
+hi! link BlinkCmpSignatureHelpBorder NormalFloat
+hi! link BlinkCmpSource PmenuExtra
+hi! link Character Constant
+hi! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
+hi! link CmpItemKindInterface CmpItemKindVariable
+hi! link CmpItemKindMethod CmpItemKindFunction
+hi! link CmpItemKindProperty CmpItemKindKeyword
+hi! link CmpItemKindUnit CmpItemKindKeyword
+hi! link Conceal Ignore
+hi! link Conditional Statement
+hi! link CtrlPLinePre Comment
+hi! link CtrlPMatch String
+hi! link CurSearch Search
+hi! link CursorLineFold FoldColumn
+hi! link CursorLineSign SignColumn
+hi! link Debug Special
+hi! link Define PreProc
+hi! link DiagnosticError ErrorMsg
+hi! link DiagnosticErrorFloating ErrorMsg
+hi! link DiagnosticFloatingError ErrorMsg
+hi! link DiagnosticFloatingHint DiagnosticHint
+hi! link DiagnosticFloatingInfo DiagnosticInfo
+hi! link DiagnosticFloatingOk DiagnosticOk
+hi! link DiagnosticFloatingWarn DiagnosticWarn
+hi! link DiagnosticFloatingWarning DiagnosticWarning
+hi! link DiagnosticSignOk DiagnosticOk
+hi! link DiagnosticVirtualTextOk DiagnosticOk
+hi! link EndOfBuffer NonText
+hi! link Error ErrorMsg
+hi! link Exception Statement
+hi! link Float Number
+hi! link FloatTitle Title
+hi! link FzfLuaBorder Normal
+hi! link FzfLuaCursor Cursor
+hi! link FzfLuaCursorLine CursorLine
+hi! link FzfLuaCursorLineNr CursorLineNr
+hi! link FzfLuaNormal Normal
+hi! link FzfLuaScrollFloatEmpty PmenuSbar
+hi! link FzfLuaScrollFloatFull PmenuThumb
+hi! link FzfLuaSearch IncSearch
+hi! link Include PreProc
+hi! link Keyword Statement
+hi! link Label Statement
+hi! link LazyReasonRuntime ErrorMsg
+hi! link LazySpecial Special
+hi! link LazyTaskError ErrorMsg
+hi! link LineNrAbove LineNr
+hi! link LineNrBelow LineNr
+hi! link LspBorderBG FloatBorder
+hi! link LspCodeLens Comment
+hi! link Macro PreProc
+hi! link MasonHeaderSecondary LazyButtonActive
+hi! link MasonHighlightBlock LazyH2
+hi! link MasonHighlightBlockBold LazyH1
+hi! link MasonMutedBlock MasonMuted
+hi! link MasonMutedBlockBold MasonHighlight
+hi! link MasonNormal LazyNormal
+hi! link MsgSeparator StatusLine
+hi! link NERDTreeExecFile String
+hi! link NormalFloat Pmenu
+hi! link NvimArrow Delimiter
+hi! link NvimColon Delimiter
+hi! link NvimComma Delimiter
+hi! link NvimFigureBrace ErrorMsg
+hi! link NvimIdentifier Identifier
+hi! link NvimInternalError ErrorMsg
+hi! link NvimInvalid ErrorMsg
+hi! link NvimInvalidSingleQuotedUnknownEscape ErrorMsg
+hi! link NvimInvalidSpacing ErrorMsg
+hi! link NvimNumber Number
+hi! link NvimNumberPrefix Type
+hi! link NvimOptionSigil Type
+hi! link NvimParenthesis Delimiter
+hi! link NvimSingleQuotedUnknownEscape ErrorMsg
+hi! link NvimSpacing Normal
+hi! link NvimString String
+hi! link Operator Delimiter
+hi! link PmenuExtra Pmenu
+hi! link PmenuExtraSel PmenuSel
+hi! link PmenuKindSel PmenuSel
+hi! link PreCondit PreProc
+hi! link PreProc Keyword
+hi! link QuickFixLine Search
+hi! link Repeat Statement
+hi! link SpecialChar Special
+hi! link SpecialComment Special
+hi! link StorageClass Type
+hi! link Structure Type
+hi! link Substitute Search
+hi! link Tag Special
+hi! link TelescopeMatching Special
+hi! link TelescopePreviewBorder TelescopeBorder
+hi! link TelescopePreviewDirectory String
+hi! link TelescopePreviewLine TelescopeSelection
+hi! link TelescopePreviewMatch Special
+hi! link TelescopePreviewTitle TelescopeTitle
+hi! link TelescopePromptCounter TelescopeBorder
+hi! link TelescopePromptPrefix TelescopeTitle
+hi! link TelescopePromptTitle TelescopeTitle
+hi! link TelescopeResultsBorder TelescopeBorder
+hi! link TelescopeResultsClass Special
+hi! link TelescopeResultsConstant Constant
+hi! link TelescopeResultsFileIcon Special
+hi! link TelescopeResultsFunction Function
+hi! link TelescopeResultsIdentifier Identifier
+hi! link TelescopeResultsLineNr LineNr
+hi! link TelescopeResultsMethod @method
+hi! link TelescopeResultsOperator Operator
+hi! link TelescopeResultsStruct Constant
+hi! link TelescopeResultsTitle TelescopeTitle
+hi! link TelescopeResultsVariable @property
+hi! link Typedef Type
+hi! link Whitespace NonText
+hi! link WinBarNC WinBar
+hi! link WinSeparator VertSplit
+hi! link gitCommitDiscardedFile gitCommitUnmergedFile
+hi! link gitCommitDiscardedType gitCommitUnmergedType
+hi! link gitCommitFile Directory
+hi! link gitCommitUntrackedFile gitCommitUnmergedFile
+hi! link helpExample String
+hi! link helpHeadline Title
+hi! link helpHyperTextEntry Statement
+hi! link helpHyperTextJump Underlined
+hi! link helpSectionDelim Comment
+hi! link helpURL Underlined
+hi! link htmlEndTag htmlTag
+hi! link htmlLink Underlined
+hi! link javaScript Normal
+hi! link javaScriptBraces Delimiter
+hi! link lessVariableValue Normal
+hi! link markdownCodeBlock String
+hi! link markdownCodeDelimiter NonText
+hi! link markdownHeadingRule NonText
+hi! link markdownLinkDelimiter Delimiter
+hi! link markdownURLDelimiter Delimiter
+hi! link phpDefine Statement
+hi! link phpHereDoc String
+hi! link phpVarSelector phpIdentifier
+hi! link rubyConstant Constant
+hi! link rubyDefine Statement
+hi! link rubyInstanceVariable Number
+hi! link rubyLocalVariableOrMethod Identifier
+hi! link shDerefVar shDerefSimple
+hi! link vimContinue Delimiter
+hi! link vimHiAttrib Constant
+hi! link vimSetSep Delimiter
+hi! link xmlAttrib xmlTag
+hi! link xmlEndTag xmlTag
+hi! link xmlEqual xmlTag
+hi! link xmlString xmlTagName
