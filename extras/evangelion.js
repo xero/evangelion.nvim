@@ -14,7 +14,7 @@
 
 black       = '#14091e'
 midnight    = '#201430'
-darkgrey    = '#3B3847'
+darkgrey    = '#A1A0AD'
 darkred     = '#5b2b41'
 red         = '#DB6088'
 darkgreen   = '#9CDA7C'
